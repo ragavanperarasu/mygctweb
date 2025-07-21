@@ -20,7 +20,7 @@ export default function Nav() {
         Home
       </Button>
       <Button fullWidth startIcon={<PersonRoundedIcon />} sx={{ justifyContent: 'flex-start', mb: 1, textTransform: 'none' }} onClick={()=>navigate('/alumin')}>
-        Alumin
+        Alumni
       </Button>
       <Button fullWidth startIcon={<InfoIcon />} sx={{ justifyContent: 'flex-start', mb: 1, textTransform: 'none' }}>
         About
@@ -65,7 +65,7 @@ export default function Nav() {
                 Home
               </Button>
               <Button color="inherit" startIcon={<PersonRoundedIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher" }} onClick={()=>navigate('/alumin')}>
-                Alumin
+                Alumni
               </Button>
               <Button color="inherit" startIcon={<InfoIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher"}}>
                 About

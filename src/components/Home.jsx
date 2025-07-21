@@ -50,7 +50,7 @@ export default function Home() {
             color: "white",
           }}
         >
-          GCT Alumin Support
+          GCT Alumni Support
         </Typography>
 
         <Button
