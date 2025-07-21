@@ -328,7 +328,7 @@ await axios.post('https://mygct.org/app/uplalu', formData, {
         }
       }}
     >
-      Alumin New Profile
+      Alumni New Profile
     </Box>
 
     <Box
