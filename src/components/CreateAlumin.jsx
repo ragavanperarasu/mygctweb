@@ -11,6 +11,7 @@ import {
   DialogTitle,
   Alert,
   Stack,
+  LinearProgress,
 } from "@mui/material";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import Cropper from "react-easy-crop";
@@ -20,6 +21,8 @@ import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 import { IconButton, Avatar } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import mygct from '../assets/mygct.png'
+
 
 const deptdata = [
   { label: "Civil Engineering", value: "Civil Engineering" },
@@ -67,6 +70,8 @@ const CreateAlumin = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [showAlert2, setShowAlert2] = useState(false);
 
+  const [loading, setLoading] = useState(false); 
+
   const onCropComplete = useCallback((_, croppedAreaPixels) => {
     setCroppedAreaPixels(croppedAreaPixels);
   }, []);
@@ -99,15 +104,14 @@ const CreateAlumin = () => {
   };
 
   const handleSubmit = async () => {
-
+    setLoading(true)
     try {
       const formData = new FormData();
-      formData.append('name', name);
-      // formData.append('mobile', mobile);
+      formData.append('name', name.charAt(0).toUpperCase() + name.slice(1).toLowerCase());
       formData.append('year', year);
-      formData.append('email', email);
+      formData.append('email', email.toLowerCase());
       formData.append('department', department);
-      formData.append('domain', domain);
+      formData.append('domain', domain.charAt(0).toUpperCase() + domain.slice(1).toLowerCase());
       formData.append('linkedin', linkedin);
 
       if (croppedImage) {
@@ -115,12 +119,13 @@ const CreateAlumin = () => {
         const blob = await response.blob();
         formData.append('file', blob, 'profile.jpg');
       }
-await axios.post('http://localhost:5000/uplalu', formData, {
+await axios.post('https://mygct.org/app/uplalu', formData, {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
 }).then((res) => {
   if (res.data === "done") {
+    setLoading(true)
     navigate('/alumin');
     alert("Submitted Successfully!");
   }
@@ -131,6 +136,8 @@ await axios.post('http://localhost:5000/uplalu', formData, {
     } catch (error) {
       console.error("Submit failed", error);
       alert("Submission failed. Try again.");
+    }finally{
+      setLoading(true)
     }
   };
 
@@ -162,8 +169,33 @@ await axios.post('http://localhost:5000/uplalu', formData, {
 
   return (
     <div style={{ backgroundColor: "transparent", minHeight: "100vh" }}>
+
+    
       <Nav />
 
+            {loading ? (
+      <Box
+        sx={{
+          height: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'start',
+          alignItems: 'center',
+          px: 4,
+          marginTop:'10%'
+        }}
+      >
+        <img
+          src={mygct}
+          alt="Loading"
+          style={{ width: 200, height: 200 }}
+        />
+        <Box sx={{ width: '100%', maxWidth: 150 }}>
+          <LinearProgress color="success" />
+        </Box>
+      </Box>
+      ) : (
+      <div>
       <Box
         component="form"
         noValidate
@@ -576,6 +608,8 @@ await axios.post('http://localhost:5000/uplalu', formData, {
           </Button>
         </DialogActions>
       </Dialog>
+    </div>)}
+    
     </div>
   );
 };

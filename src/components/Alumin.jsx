@@ -31,7 +31,7 @@ const Alumin = () => {
   const fetchProfiles = async (pageNum = 1) => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000/getalu?page=${pageNum}&limit=15`);
+      const res = await axios.get(`https://mygct.org/app/getalu?page=${pageNum}&limit=15`);
       setProfiles(res.data.data);
       setTotalPages(res.data.totalPages);
       setPage(res.data.page);
@@ -124,7 +124,7 @@ const Alumin = () => {
     />
               <Avatar
                 alt={alumin.name}
-                src={`http://localhost:5000/${alumin.ipath}`}
+                src={`https://mygct.org/app/${alumin.ipath}`}
                 sx={{
                   width: 180,
                   height: 180,
