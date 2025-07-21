@@ -19,7 +19,7 @@ export default function Nav() {
       <Button fullWidth startIcon={<HomeRoundedIcon />} sx={{ justifyContent: 'flex-start', mb: 1 , textTransform: 'none'}} onClick={()=>navigate('/')}>
         Home
       </Button>
-      <Button fullWidth startIcon={<PersonRoundedIcon />} sx={{ justifyContent: 'flex-start', mb: 1, textTransform: 'none' }} onClick={()=>navigate('/alumin')}>
+      <Button fullWidth startIcon={<PersonRoundedIcon />} sx={{ justifyContent: 'flex-start', mb: 1, textTransform: 'none' }} onClick={()=>navigate('/alumni')}>
         Alumni
       </Button>
       <Button fullWidth startIcon={<InfoIcon />} sx={{ justifyContent: 'flex-start', mb: 1, textTransform: 'none' }}>
@@ -64,7 +64,7 @@ export default function Nav() {
               <Button color="inherit" startIcon={<HomeRoundedIcon/>} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher",}} onClick={()=>navigate('/')}>
                 Home
               </Button>
-              <Button color="inherit" startIcon={<PersonRoundedIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher" }} onClick={()=>navigate('/alumin')}>
+              <Button color="inherit" startIcon={<PersonRoundedIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher" }} onClick={()=>navigate('/alumni')}>
                 Alumni
               </Button>
               <Button color="inherit" startIcon={<InfoIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher"}}>

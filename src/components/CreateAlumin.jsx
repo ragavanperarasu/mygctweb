@@ -126,7 +126,7 @@ await axios.post('https://mygct.org/app/uplalu', formData, {
 }).then((res) => {
   if (res.data === "done") {
     setLoading(true)
-    navigate('/alumin');
+    navigate('/alumni');
     alert("Submitted Successfully!");
   }
 });

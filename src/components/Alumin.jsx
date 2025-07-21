@@ -41,7 +41,6 @@ const Alumin = () => {
     }finally {
     setLoading(false);
   }
-
   };
 
   useEffect(() => {
@@ -56,9 +55,6 @@ const Alumin = () => {
   return (
     <div style={{ backgroundColor: "whitesmoke", minHeight: "100vh" }}>
       <Nav />
-      
-      
-
 
       {loading ? (
 <Box
@@ -87,7 +83,7 @@ const Alumin = () => {
         <Button
           variant="outlined"
           startIcon={<PersonAddIcon />}
-          onClick={() => navigate('/createalumin')}
+          onClick={() => navigate('/createalumni')}
           sx={{
             textTransform: 'none',
             backgroundColor: "white",
