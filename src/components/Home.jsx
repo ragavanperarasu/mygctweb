@@ -55,7 +55,7 @@ export default function Home() {
 
         <Button
           variant="outlined"
-          onClick={()=>navigate('/alumin')}
+          onClick={()=>navigate('/alumni')}
           startIcon={<PersonAddIcon />}
           sx={{
             textTransform: "none",
@@ -103,12 +103,12 @@ export default function Home() {
             color: "white",
           }}
         >
-          My GCT App
+          My GCT Hub App
         </Typography>
 
         <Button
           variant="outlined"
-          onClick={()=>navigate('/alumin')}
+          onClick={() => window.open("https://play.google.com/store/apps/details?id=com.mygcthub", "_blank")}
           startIcon={<FaGooglePlay />}
           sx={{
             textTransform: "none",
@@ -153,12 +153,12 @@ export default function Home() {
             color: "white",
           }}
         >
-          My GCT App
+          Privacy Policy
         </Typography>
 
         <Button
           variant="outlined"
-          onClick={()=>navigate('/alumin')}
+          onClick={() => window.open("https://mygct.org/app/privacypolicy", "_blank")}
           startIcon={<AiFillAndroid />}
           sx={{
             textTransform: "none",
@@ -175,7 +175,7 @@ export default function Home() {
             fontSize:{xs:11, sm: 18, md: 20}
           }}
         >
-          Download APK
+          View Policy
         </Button>
       </Box>
         </Grid>
