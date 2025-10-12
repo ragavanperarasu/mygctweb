@@ -26,8 +26,8 @@ const MyGCTHeader = () => {
       
           <Box
         component="img"
-        src="src/assets/bg.png"
-        alt="My GCT Logo"
+        src="./bg.png"
+        alt="My GCT App"
         sx={{
           height: { xs: 300, sm: 400, md: 550 },
           width: "auto",
