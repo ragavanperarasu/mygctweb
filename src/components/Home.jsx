@@ -16,16 +16,22 @@ import {
 } from "@mui/material";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import { useNavigate } from "react-router-dom";
-import SystemUpdateIcon from '@mui/icons-material/SystemUpdate';
-import GetAppIcon from '@mui/icons-material/GetApp';
 import { FaGooglePlay } from 'react-icons/fa';
 import { AiFillAndroid } from 'react-icons/ai';
 
+import "./Home.css";
+import MyGCTHeader from "./smallComponents/MyGCTHeader";
+import { Footer } from "./Footer";
+
 export default function Home() {
   const navigate = useNavigate();
+
+
   return (
-    <div style={{ backgroundColor: "whitesmoke", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#ffffffff", minHeight: "100vh" }}>
       <Nav />
+
+      <MyGCTHeader/>
 
       <Box
         sx={{
@@ -99,7 +105,7 @@ export default function Home() {
           sx={{
             mt: 1,
             fontFamily: "Philosopher",
-            fontSize: {xs: 20, sm: 25, md: 30},
+            fontSize: {xs: 16, sm: 25, md: 30},
             color: "white",
           }}
         >
@@ -149,7 +155,7 @@ export default function Home() {
           sx={{
             mt: 1,
             fontFamily: "Philosopher",
-            fontSize: {xs: 20, sm: 25, md: 30},
+            fontSize: {xs: 16, sm: 25, md: 30},
             color: "white",
           }}
         >
@@ -180,6 +186,8 @@ export default function Home() {
       </Box>
         </Grid>
       </Grid>
+
+      <Footer/>
     </div>
   );
 }

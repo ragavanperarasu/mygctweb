@@ -1,0 +1,15 @@
+.keen-slider__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.number-slide1 { background: #f44336; }
+.number-slide2 { background: #2196f3; }
+.number-slide3 { background: #4caf50; }
+.number-slide4 { background: #ff9800; }
+.number-slide5 { background: #9c27b0; }
