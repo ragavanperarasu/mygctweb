@@ -20,7 +20,7 @@ export const Footer = () => {
     <Typography variant="body1" sx={{ color: 'white', fontFamily: "Philosopher", fontSize: { xs: 16, sm: 20, md: 20 },}}>
         My GCT Support
       </Typography>
-      <Typography variant="body1" sx={{ color: 'white', fontFamily: "Philosopher",mt:2, fontSize: 16,}}>
+      <Typography variant="body1" sx={{ color: 'white', fontFamily: "Philosopher",mt:2, fontSize: 16,mb:2,}}>
         Email : ragavan.devp@gmail.com
       </Typography>
       <Typography variant="body1" sx={{ color: 'white', fontFamily: "Philosopher", textAlign:'center', fontSize: 16,}}>
