@@ -31,18 +31,24 @@ const MyGCTHeader = () => {
           src="./log.png"
           alt="My GCT Logo"
           sx={{
-            height: { xs: 400, sm: 350, md: 500 },
+            height: { xs: 350, sm: 250, md: 500 },
             width: "auto",
+            maxWidth: { xs: "80%", sm: "40%", md: "35%" }, // scale responsively
+            mb: { xs: 4, sm: 0 },
+            mx: "auto",
           }}
         />
 
+        {/* Mobile Screenshot */}
         <Box
           component="img"
           src="./bg.png"
           alt="My GCT App"
           sx={{
-            height: { xs: 300, sm: 400, md: 550 },
+            height: { xs: 300, sm: 400, md: 500 },
             width: "auto",
+            maxWidth: { xs: "80%", sm: "45%", md: "40%" }, // scale responsively
+            mx: "auto",
           }}
         />
       </Box>
