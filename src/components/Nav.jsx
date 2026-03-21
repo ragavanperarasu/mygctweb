@@ -67,7 +67,7 @@ export default function Nav() {
               <Button color="inherit" startIcon={<PersonRoundedIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher" }} onClick={()=>navigate('/alumni')}>
                 Alumni
               </Button>
-              <Button color="inherit" startIcon={<InfoIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher"}}>
+              <Button color="inherit" startIcon={<InfoIcon />} sx={{ fontSize: 20, textTransform: 'none', fontFamily:"Philosopher"}} onClick={()=>navigate('/about')}>
                 About
               </Button>
               {/* <Button color="inherit" startIcon={<LoginIcon />} sx={{ fontSize: 16, textTransform: 'none' }}>
